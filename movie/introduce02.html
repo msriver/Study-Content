@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신세계</title>
+
+    <!-- jquery mobile -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-btn-active {
+            background: olive !important;
+            border: 1px solid gray !important;
+        }
+        .ui-grid-a{margin-bottom: 30px;}
+        .ui-grid-a img {float:left;margin-right: 10px;}
+        .ui-grid-a h4 {color: blue}
+        .ui-grid-a span {color: red; font-size: 14px;}
+        .ui-grid-a p {font-size: 12px;}
+    </style>
+  
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+            <h3>영화소개</h3>
+        </div>
+        <div data-role="navbar">
+           <ul>
+               <li><a href="introduce01.html" rel="external">영화줄거리</a></li>
+               <li><a href="introduce02.html" rel="external" class="ui-btn-active">등장인물</a></li>
+               <li><a href="introduce03.html" rel="external">영화평점</a></li>
+           </ul>
+        </div>
+        <div data-role="content">
+            <h3>등장인물</h3>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/ing.jfif" alt="이정재">
+                    <div class="actinfo">
+                        <h4>이정재</h4>
+                        <span>주연</span> | 이자성 역
+                        <p>
+                            다만 악에서 구하소서,2020<br>
+                            사바하,2019
+                        </p>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <img src="img/ing02.jfif" alt="최민식">
+                    <h4>최민식</h4>
+                    <span>주연</span> | 강과장 역
+                    <p>
+                        이상한 나라의 수학자,2019<br>
+                        행복한 나라로(가제),2019
+                    </p>
+                </div>
+            </div><!-- /grid-a -->
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/ing.jfif" alt="이정재">
+                    <h4>이정재</h4>
+                    <span>주연</span> | 이자성 역
+                    <p>
+                        다만 악에서 구하소서,2020<br>
+                        사바하,2019
+                    </p>
+                </div>
+                <div class="ui-block-b">
+                    <img src="img/ing02.jfif" alt="최민식">
+                    <h4>최민식</h4>
+                    <span>주연</span> | 강과장 역
+                    <p>
+                        이상한 나라의 수학자,2019<br>
+                        행복한 나라로(가제),2019
+                    </p>
+                </div>
+            </div><!-- /grid-a -->
+        </div>
+
+        <div data-role="footer">
+            <h3>&copy;CGV All rights reserved.</h3>
+        </div>
+
+    </div>
+</body>
+</html>

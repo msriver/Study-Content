@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0;margin:0;}
+        header {
+            width: 100%;
+            height: 100px;
+            padding: 50px;
+            background: black;
+            color: white;
+        }
+        aside {
+            width: 100px;
+            height: 600px;
+            padding:10px;
+            background: #dddddd;
+            float: left;
+        }
+        article {
+            width: 400px;
+            height: 600px;
+            padding: 10px;
+            background: white;
+        }
+        footer {
+            width:100%;
+            height: 50px;
+            padding: 20px;
+            background: gray;
+            clear: both;
+        }
+        nav {
+            width: 100%;
+            height: 30px;
+            background-color: #585656;
+            padding-left: 20px;
+        }
+        nav>div {
+            display: inline;
+            margin: 10px;
+            vertical-align: middle;
+        }
+        #nav3 {
+            position: relative;
+        }
+        #submenu {
+            position: absolute;
+            top: -70px;
+            left: 0px;
+            width: 100px;
+        }
+        #nav3:hover {
+            background-color: crimson;
+        
+        }
+        #nav3:hover #submenu {
+            top: 30px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TIS edu</h1>
+    </header>
+    <nav>
+        <div id="nav1">교육센터소개</div>
+        <div id="nav2">교육센터연혁</div>
+        <div id="nav3">교육과정
+            <div id="submenu">
+                <div>자바</div>
+                <div>웹퍼블리셔</div>
+                <div>네트워크</div>
+            </div>
+        </div>
+    </nav>
+    <aside>
+        About<br>
+        History <br>
+        Board <br>
+    </aside>
+    <article>
+        TIS 교육센터는 정부지원 IT전문교육기관 이랍니다.?
+    </article>
+    <footer>
+        TIS Edu. All rights reserved.
+    </footer>
+</body>
+</html>

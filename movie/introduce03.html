@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신세계</title>
+
+    <!-- jquery mobile -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-btn-active {
+            background: olive !important;
+            border: 1px solid gray !important;
+        }
+        .ui-grid-a{margin-bottom: 30px;}
+        .ui-grid-a img {float:left;margin-right: 10px;}
+        .ui-grid-a h4 {color: blue}
+        .ui-grid-a span {color: red; font-size: 14px;}
+        .ui-grid-a p {font-size: 12px;}
+    </style>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--구글차트 cdn-->
+     <script type="text/javascript">
+       google.charts.load('current', {'packages':['corechart']});
+       google.charts.setOnLoadCallback(drawChart);
+ 
+       function drawChart() {
+ 
+         var data = google.visualization.arrayToDataTable([
+           ['평점', '투표'],
+           ['1점',     2],
+           ['2점',      5],
+           ['3점',  3],
+           ['4점', 7],
+           ['5점',    8],
+           ['6점',     7],
+           ['7점',      25],
+           ['8점',  40],
+           ['9점', 99],
+           ['10점',    66]
+         ]);
+ 
+         var options = {
+           title: '네티즌 평점',
+           pieHole: 0.4
+         };
+ 
+         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+ 
+         chart.draw(data, options);
+       }
+     </script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+            <h3>영화평점</h3>
+        </div>
+        <div data-role="navbar">
+           <ul>
+               <li><a href="introduce01.html" rel="external">영화줄거리</a></li>
+               <li><a href="introduce02.html" rel="external">등장인물</a></li>
+               <li><a href="introduce03.html" rel="external" class="ui-btn-active">영화평점</a></li>
+           </ul>
+        </div>
+        <div data-role="content">
+            <h3>영화평점</h3>
+            <div id="piechart" style="width: 100%; height: 500px;"></div>
+            
+        </div>
+
+        <div data-role="footer">
+            <h3>&copy;CGV All rights reserved.</h3>
+        </div>
+
+    </div>
+</body>
+</html>

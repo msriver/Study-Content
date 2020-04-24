@@ -1,0 +1,130 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<!--IE에서 호환성을 높게 도와줌. 엣지처럼 동작하게 하라.-->	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title> ex1 step1  </title>
+	<!--아래 링크에 http:를 안붙이면 더블클릭했을때 실행이 안된다. 트래픽을 줄일려고하는것인데 실제 운영서비스할땐 
+	그러면 안되겠다. vscode에서 golive를 통해 실행할땐 됨.-->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<!--vendor prefix를 개발자가 명시하지않아도 알아서 추가를 해줌. prefix로부터 자유롭게해줌. 아래코드를 잘 기억하자.-->	
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <!--배경동영상------------------------------------------------------------------------------------------->
+    <!--figure는 시만틱태그로써 멀티미디어를 출력할때 주로 사용. 이미지나 동영상등. 이 자료는 멀티미디어 자료이다.!-->
+    <figure class="vid">
+        <video loop autoplay muted> <!--속성과 값이 이름이 동일할경우 값을 생략가능, autoplay하기위해선 muted가 필수-->
+            <source src="img/nike.mp4" type="video/mp4" />
+        </video>
+    </figure>
+    <!--배경동영상-->
+    
+    <!-- 로고 -------------------------------------------------------------------->
+	<h1><img src="img/logo2.png" /></h1>
+    <!--로고-->
+    
+	<!-- header ------------------------------------------------------------------->
+	<header>	
+		<!--사실상의 navigation. 저자는 따로 만들지않고 헤더에 만든듯 gnb = global navigation bar // local navigation bar = lnb-->	
+		<ul id="gnb">
+			<!--on은 active와 같다. 현재페이지를 표시할때 관례적으로 사용되는 class명이다.-->
+			<li class="on">
+				<!--i태그의 class는 3개의 클래스가 같이 적용됨. 공백으로 분리하여 작성. 앞에거부터 적용되며 뒤에거는 덮어쓰기.-->
+                <a href="#"><em><i class="fa fa-refresh fa-spin"></i>About NIKE</em></a>
+                <ul>
+					<li><a href="#"><em>Nice NIKE!</em></a></li>
+				</ul>				
+			</li>
+			<li>
+                <a href="#"><em>Brand Info</em></a>
+                <ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>						
+			</li>
+			<li>
+                <a href="#"><em> Community</em></a>
+                <ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>				
+			</li>
+			<li>
+                <a href="#"><em>Product Value</em></a>		
+                <ul>
+					<li><a href="#"><em>sub</em></a></li>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>		
+			</li>
+			<li>				
+                <a href="#"><em>Company History</em></a>
+                <ul>
+					<li><a href="#"><em>sub</em></a></li>
+				</ul>				
+			</li>	
+		</ul>
+    </header>
+    <!-- header-->
+
+    <!-- sns 버튼모음 ------------------------------------------------------------------------------------------>
+	<ul id="sns">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+    </ul>
+    <!-- sns 버튼모음 -->
+
+    <!-- 웹폰트 텍스트박스 ------------------------------------------------------------------------------------->
+	<section class="txtBox">
+		<p class="txt">Best Qualified<b>AIR MAX</b></p>
+		<p class="tit">50<em>/ 24</em></p>
+    </section>	
+    <!-- 웹폰트 텍스트박스 -->
+
+    <!-- 하단 컨텐츠박스 ---------------------------------------------------------------------------------------->
+	<section id="side"><!-- section과 article의 차이? section은 주제가 있다. article은 그냥 주제없이 글 모음이다.-->
+		<div class="con">
+			<p>
+				<em>Event & Community</em>
+				<a href="#"><img src="img/pic1.png" /></a>				
+			</p>
+			<p>
+				<em>News & Notice</em>
+				<a href="#"><img src="img/pic2.png" /></a>				
+			</p>
+			<p>
+				<em>Product Review</em>
+				<a href="#"><img src="img/pic3.png" /></a>				
+			</p>		
+        </div>
+        <!-- 자동롤링 버튼 --------------------------------------------------------------------------->
+		<div class="btnContents">
+			<i class="fa fa-angle-double-left"></i>
+			<i class="fa fa-angle-double-left"></i>  
+			<i class="fa fa-angle-double-left"></i>
+        </div>		
+        <!-- 자동롤링 버튼 -->
+    </section>
+    <!-- 하단 컨텐츠박스 -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width:200px;
+            height: 100px;
+            border-radius: 50px;
+            background: red;
+            text-align: center;
+            padding-top: 100px;
+        }
+        img{
+            border-radius: 25px;
+        }
+        input{
+            border: 2px solid red;
+            padding:5px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        #circle{
+            width:300px;
+            height: 300px;
+            border-radius: 150px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">box1</div>
+    <img src="img/sea.jpg" width="400" alt="1">
+    <form action="login.jsp" method="POST">
+        id <input type="text" name="id"><br>
+        pw <input type="password" name="pw"><br>
+        <input type="submit" value="로그인">
+    </form>
+    <div id="circle">circle</div>  <!--border layout으로 원만들기. 가로세로 길이의 절반을 radius로 줌-->
+</body>
+</html>

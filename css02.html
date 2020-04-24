@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <!--외부적용 externel  : 모든페이지에 공통적인 부분을 적용할 때-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--internel : 이 하나의 페이지만 적용하고 싶을때 -->
+    <!-- block level과 line level의 차이도 아래 코드를 통해 느껴보자-->
+    <style>
+        body {
+            
+            background-color: orange; 
+            background-image: url("img/bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+       
+            
+        }
+        div {border: solid red ;}
+        h3 {background-color: hotpink;width:100px;height:100px;}
+        span {background-color:  darkorange;width: 100px;height: 100px;}
+        div.title {height: 150px; background-color: seagreen;
+                    border:none;
+                    border-left: solid black 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is header </h1>
+    <p>this is a paragraph</p>
+    <h3>this is zz</h3>
+    css3
+    <span>ggss whtf</span>
+    css3
+    <!-- inline방식 : 이 하나의 요소에만 적용 -->
+    <p style="background-color: gold;">css3</p>
+    <div class="title">CSS3</div>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+    <h1>this is header </h1>
+  
+</body>
+</html>

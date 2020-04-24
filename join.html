@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <h3>회원가입</h3>
+    <form action="join.jsp" method="POST">
+        id <input type="text" name="id"><br>
+        name <input type="text" name="name"><br>
+        pw <input type="password" name="pw"><br>
+        email <input type="text" name="email"><br>
+        <!--html에서 라디오버튼은 그룹핑을 같은 name 지정으로 해준다.-->
+        email수신여부 <input type="radio" value="예" name="emailYN"> 예
+                        <input type="radio" value="아니오" name="emailYN"> 아니오
+        <!--체크박스는 네임을 같이한다고 그룹지정이 안된다. 그냥 배열로 처리가 된다. 같이해줘도 다르게해줘도 상관없다.-->
+        <br>
+        취미 <input type="checkbox" value="운동" name="hobby1"> 운동
+        <input type="checkbox" value="노래" name="hobby2"> 노래
+        <input type="checkbox" value="독서" name="hobby3"> 독서
+        <input type="checkbox" value="요리" name="hobby4"> 요리<br>
+        <!--아래는 콤보박스이다.-->
+        직업 <select name="job">
+                <option value="학생">학생</option>
+                <option value="직장인">직장인</option>
+                <option value="군인">군인</option>
+                <option value="기타">기타</option>
+        </select> <br>
+        <!--실제로 서버측(위 예제에선 login.jsp)에 보내는 값은 values에 적힌 값이 데이터베이스 안으로 들어가는것이다. 그 전달된 값을 받을 일종의 변수이름은 name-->
+        자기소개<br>
+        <textarea name="introduce" cols="50" rows="10">입력하세용</textarea><br>
+        사진 <input type="file" name="picture"><br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+
+</html>
