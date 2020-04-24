@@ -11,9 +11,16 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
         .ui-btn-active {
-            background: olive !important;
-            border: 1px solid gray !important;
+            background: #F45251 !important;
+            border: 1px solid #F45251 !important;
         }
+        .actorinfo {margin-bottom: 15px;}
+        .actorinfo img {float: left; margin-right: 10px;}
+        .actorinfo div {height: 140px;}
+        .actorinfo h4 {color: blue;}
+        .actorinfo span {color: red; font-size: 14px;}
+        .actorinfo p {font-size: 12px;}
+
         .ui-grid-a{margin-bottom: 30px;}
         .ui-grid-a img {float:left;margin-right: 10px;}
         .ui-grid-a h4 {color: blue}
@@ -24,12 +31,16 @@
             text-shadow: none !important;
             color: white !important;
         }
+        .header {
+            background-color: rgb(170, 170, 170) !important;
+            text-shadow: none !important;
+        } 
     </style>
   
 </head>
 <body>
     <div data-role="page">
-        <div data-role="header">
+        <div data-role="header" class="header">
             <a href="index.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
             <h3>영화소개</h3>
         </div>
@@ -40,51 +51,105 @@
                <li><a href="introduce03.html" rel="external">영화평점</a></li>
            </ul>
         </div>
-        <div data-role="content">
+        <!--content-------------------------------------------------------------------------------------->
+        <div data-role="content" class="content">
             <h3>등장인물</h3>
-            <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <img src="img/ing.jfif" alt="이정재">
-                    <div class="actinfo">
-                        <h4>이정재</h4>
+
+             <!--주연 ------------------------------------------------------------------------------>
+            <div class="actorinfo">
+                <img src="img/ing.jfif" alt="이정재">
+                <div>
+                    <h4>이정재</h4>
                         <span>주연</span> | 이자성 역
                         <p>
                             다만 악에서 구하소서,2020<br>
                             사바하,2019
                         </p>
-                    </div>
-                </div>
-                <div class="ui-block-b">
-                    <img src="img/ing02.jfif" alt="최민식">
+                </div>    
+            </div>
+            <div class="actorinfo">
+                <img src="img/ing02.jfif" alt="최민식">
+                <div>
                     <h4>최민식</h4>
-                    <span>주연</span> | 강과장 역
-                    <p>
-                        이상한 나라의 수학자,2019<br>
-                        행복한 나라로(가제),2019
-                    </p>
-                </div>
-            </div><!-- /grid-a -->
+                        <span>주연</span> | 강과장 역
+                        <p>
+                            이상한 나라의 수학자,2019<br>
+                            행복한 나라로(가제),2019
+                        </p>
+                </div>    
+            </div>
+            <div class="actorinfo">
+                <img src="img/ing03.jfif" alt="황정민">
+                <div>
+                    <h4>황정민</h4>
+                        <span>주연</span> | 정청 역
+                        <p>
+                            교섭,2020<br>
+                            다만 악에서 구하소서,2020
+                        </p>
+                </div>    
+            </div>
+            <!-- 주연 -->
+
+            <!--grid a 조연들----------------------------------------------------------------->
             <div class="ui-grid-a">
                 <div class="ui-block-a">
-                    <img src="img/ing.jfif" alt="이정재">
-                    <h4>이정재</h4>
-                    <span>주연</span> | 이자성 역
+                    <img src="img/jo1.jfif" alt="박성웅">
+                    <h4>박성웅</h4>
+                    <span>조연</span>
                     <p>
-                        다만 악에서 구하소서,2020<br>
-                        사바하,2019
+                        이중구 역
                     </p>
                 </div>
                 <div class="ui-block-b">
-                    <img src="img/ing02.jfif" alt="최민식">
-                    <h4>최민식</h4>
-                    <span>주연</span> | 강과장 역
+                    <img src="img/jo2.jfif" alt="송지효">
+                    <h4>송지효</h4>
+                    <span>조연</span>
                     <p>
-                        이상한 나라의 수학자,2019<br>
-                        행복한 나라로(가제),2019
+                        신우 역
                     </p>
                 </div>
-            </div><!-- /grid-a -->
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/jo3.jfif" alt="김윤성">
+                    <h4>김윤성</h4>
+                    <span>조연</span>
+                    <p>
+                        석무 역
+                    </p>
+                </div>
+                <div class="ui-block-b">
+                    <img src="img/jo4.jfif" alt="나광훈">
+                    <h4>나광훈</h4>
+                    <span>조연</span>
+                    <p>
+                        양문석 역
+                    </p>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/jo5.jfif" alt="박로사">
+                    <h4>박로사</h4>
+                    <span>조연</span>
+                    <p>
+                        주경 역
+                    </p>
+                </div>
+                <div class="ui-block-b">
+                    <img src="img/jo6.jfif" alt="최일화">
+                    <h4>최일화</h4>
+                    <span>조연</span>
+                    <p>
+                        장이사 역
+                    </p>
+                </div>
+            </div>
+            <!-- /grid-a 조연들 -->
+
         </div>
+        <!-- content -->
 
         <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>

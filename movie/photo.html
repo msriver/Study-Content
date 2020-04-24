@@ -19,16 +19,21 @@
             text-shadow: none !important;
             color: white !important;
         }
+        
+        .header {
+            background-color: rgb(170, 170, 170) !important;
+            text-shadow: none !important;
+        }
     </style>
 </head>
 <body>
     <div data-role="page">
-        <div data-role="header">
+        <div data-role="header" class="header">
                     <a href="index.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
             <h3>영화이미지</h3>
         </div>
         
-        <div data-role="content">
+        <div data-role="content" class="content">
             <div class="fotorama" data-width="100%" data-loop="true" data-nav="thumbs" data-autoplay="3000">
                 <img src="img/movie1.jpg" alt="">
                 <img src="img/movie2.jpg" alt="">

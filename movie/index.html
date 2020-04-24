@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,75 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--fotorama-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <style>
         .footer {
             background-color: darkred !important;
             text-shadow: none !important;
             color: white !important;
         }
+       
+        .header {
+            background-color: #737373 !important;
+            text-shadow: none !important;
+
+        }
     </style>
 </head>
-<body>
-    <div data-role="page">
-        <div data-role="header">
-            <img src="img/title.jpg" alt="타이틀이미지" width="100%">
-        </div>
 
-        <div data-role="content">
+<body>
+    <div data-role="page" class="page">
+        <!-- 포스터 이미지 삽입 ------------------------------------------------------------------------------>
+        <div data-role="header" class="header">
+            <div class="fotorama" data-width="100%" data-loop="true" data-autoplay="true">
+                <img src="img/title.jpg" alt="포스터1">
+                <img src="img/title2.jpg" alt="포스터2">
+                <img src="img/title3.jpg" alt="포스터3">
+            </div>
+        </div>
+        <!-- 포스터 이미지 삽입 -->
+
+        <!-- 이동할 페이지 링크------------------------------------------------------------------------------------->
+        <div data-role="content" class="content">
             <ul data-role="listview" data-inset="true">
                 <li>
-                    <a href="photo.html" rel="external"> <!-- external 이거 중요하다. 제이쿼리모바일은 싱글페이지를 추구하는데 우린 지금 따로 파일을 만들어 링크를 걸었다. 때문에 이걸 붙여주지않으면 원활하게 동작하지 않는다.-->
-                    <img src="img/icon1.png" class="ui-li-icon" alt="icon1">
-                    영화이미지
+                    <a href="photo.html" rel="external">
+                        <!-- external 이거 중요하다. 제이쿼리모바일은 싱글페이지를 추구하는데 우린 지금 따로 파일을 만들어 링크를 걸었다. 때문에 이걸 붙여주지않으면 원활하게 동작하지 않는다.-->
+                        <img src="img/icon1.png" class="ui-li-icon" alt="icon1">
+                        영화이미지
                     </a>
                 </li>
                 <li>
                     <a href="movie.html" rel="external">
-                    <img src="img/icon2.png" class="ui-li-icon" alt="icon2">
-                    영화예고편
+                        <img src="img/icon2.png" class="ui-li-icon" alt="icon2">
+                        영화예고편
                     </a>
                 </li>
                 <li>
                     <a href="introduce01.html" rel="external">
-                    <img src="img/icon3.png" class="ui-li-icon" alt="icon3">
-                    영화소개
+                        <img src="img/icon3.png" class="ui-li-icon" alt="icon3">
+                        영화소개
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="map.html" rel="external">
-                    <img src="img/icon5.png" class="ui-li-icon" alt="icon5">
-                    영화관위치
+                        <img src="img/icon5.png" class="ui-li-icon" alt="icon5">
+                        영화관위치
                     </a>
                 </li>
             </ul>
         </div>
+        <!-- 이동할 페이지 링크 -->
 
+        <!-- footer, 맨아래 표시 모두 동일하게 출력 -------------------------------------------------------->
         <div data-role="footer" class="footer">
             <h3>&copy;CGV All rights reserved.</h3>
         </div>
-
+        <!-- footer -->
     </div>
 </body>
+
 </html>

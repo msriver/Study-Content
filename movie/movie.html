@@ -15,17 +15,22 @@
             text-shadow: none !important;
             color: white !important;
         }
+        
+        .header {
+            background-color: rgb(170, 170, 170) !important;
+            text-shadow: none !important;
+        }
     </style>
   
 </head>
 <body>
     <div data-role="page">
-        <div data-role="header">
+        <div data-role="header" class="header">
             <a href="index.html" rel="external" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
             <h3>영화예고편</h3>
         </div>
         
-        <div data-role="content">
+        <div data-role="content" class="content">
             <iframe width="100%" height="360" src="https://www.youtube.com/embed/rvLMVcRkRfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="100%" height="394" src="https://www.youtube.com/embed/F02upV3YeFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
