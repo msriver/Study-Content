@@ -17,7 +17,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ddd;">
     <div class="container-fluid" style="background-color: green;">
         <h1>BootStrap</h1>
         <p>BootStrap is a free front-end framework!! for making mobile-first, reponsive web page</p>
@@ -59,5 +59,86 @@
         <h5>h5 heading <small>secondary text</small></h5>
         <h6>h6 heading <small>secondary text</small></h6>
       </div>
+    
+    <!-- 작성한 내용ㅇ를 그대로 출력해주는 기능이다. 게시판 만들때 유용히 쓸것. -->
+    <pre>
+        Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks.
+    </pre>
+
+    <!--텍스트 색깔을 입힐때 class를 사용해서 한다. 이름이 잘 외워지지는 않을듯. -->
+    <div class="container">
+        <h2>Contextual Colors</h2>
+        <p>Use the contextual classes to provide "meaning through colors":</p>
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-primary">This text is important.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-info">This text represents some information.</p>
+        <p class="text-warning">This text represents a warning.</p>
+        <p class="text-danger">This text represents danger.</p>
+        <p class="text-secondary">Secondary text.</p>
+        <p class="text-dark">This text is dark grey.</p>
+        <p class="text-body">Default body color (often black).</p>
+        <p class="text-light">This text is light grey (on white background).</p>
+        <p class="text-white">This text is white (on white background).</p>
+    </div>
+
+    <div class="container">
+        <table class="table table-bordered">
+            <tr>
+                <th>과정명</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>응용S/W</td>
+                <td>응용S/W개발자 양성 자바 과정</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <img src="img/sea.jpg" class="rounded" width="33%" alt="">
+        <img src="img/sea.jpg" class="rounded-circle" width="33%" alt="">
+        <img src="img/sea.jpg" class="img-thumbnail" width="33%" alt="">
+    </div>
+
+    <!--뭔가 강조하고 싶은 내용?을 쓸때 편리할듯-->
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Bootstrap Tutorial</h1>      
+          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+        </div>
+        <p>This is some text.</p>      
+        <p>This is another text.</p>      
+      </div>
+
+      <!--경고창들 이후 닫기버튼 button태그, &times; 는 x자를 그냥 글자 x보다 더 세련되게 표시-->
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>
+      
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning btn-lg">Warning</button>
+    <button type="button" class="btn btn-danger btn-sm">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light btn-sm">Light</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+    <div class="container">
+        <!--버튼그룹-->
+        <div class="btn-group">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+    </div>
 </body>
 </html>
