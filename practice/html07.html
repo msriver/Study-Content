@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .container {
+           
+            width: 1000px;
+            height: 200px;
+            position: relative;
+            top: 150px;
+            left: 150px;
+        }
+        .hottopic {
+            display: inline-block;
+            float: left;
+            width: 30%;
+            height: 200px;
+            margin-right: 15px;
+            margin-left: 17px;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            height: 25%;
+            background-color: rgba(145, 226, 226,0.8);
+            
+            transition: 0.5s;
+        }
+        .beforetext {
+            color: black;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .aftertext {
+            color: black;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+        }
+
+        .hottopic:hover .overlay {
+            height: 100%; 
+        }
+        .hottopic:hover .beforetext {
+            opacity: 0;
+        }
+        .hottopic:hover .aftertext {
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hottopic">
+            <img src="img/pic1.jpg" width="100%" height="200px" alt="dog">
+            <div class="overlay">
+                <div class="beforetext"> 
+                    There are two dogs
+                </div>
+                <div class="aftertext">
+                    안녕하세용 강아지입니다. 강아지입니다. 강아지입니다.
+                </div>
+            </div>
+        </div>
+        <div class="hottopic">
+            <img src="img/pic2.jpg" width="100%" alt="cat">
+            <div class="overlay">
+                <div class="beforetext"> 
+                    There are 쓰리 캣츠
+                </div>
+                <div class="aftertext">
+                    안녕하세용 고양이입니다. 고양이입니다. 고양이입니다.
+                </div>
+            </div>
+        </div>
+        <div class="hottopic">
+            <img src="img/pic3.jpg" width="100%" alt="bear">
+            <div class="overlay">
+                <div class="beforetext"> 
+                    There is 원 곰돌이
+                </div>
+                <div class="aftertext">
+                    안녕하세용 곰돌이입니다. 곰돌이입니다. 곰돌이입니다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
