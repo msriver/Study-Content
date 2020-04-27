@@ -4,24 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIS.Ede</title>
-    <!--bootstrap을 쓰기위한 cdn-->
+    <!--BOOTSTRAP CDN------------------------------------------------------------------------>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- BOOTSTRAP CDN -->
+
+    <!--fontawesome-------------------------------------------------------------------------->
+    <script src="https://kit.fontawesome.com/3f56318ab4.js" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <style>
+        .jumbotron {
+          background-color: #6fb0ce; /* Orange */
+          color: #ffffff;
+          padding: 100px 25px;
+        }
+        .container-fluid {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo {
+            font-size: 200px;
+        }
+        .logo-small {
+            color: #6fb0ce;
+            font-size: 50px;
+        }
+        @media screen and (max-width: 768px) {
+            .jumbotron{
+                padding: 200px 25px;
+            }
+            .col-sm-4 {
+            text-align: center;
+            margin: 25px 0;
+            }
+        }
+        .h2padd{
+            padding-bottom: 20px;
+        }
+
+    </style>
 </head>
-<body>
-    <div class="jumbotron">
+<body id="myPage">
+    <div class="jumbotron text-center">
         <h1>TIS정보기술교육센터</h1>      
         <p>- 정부지원 IT전문 훈련기관</p>
-      </div>
+        <div style="width: 500px;margin: auto;">
+            <form class="form-inline">
+                <div class="input-group">
+                  <input type="text" class="form-control" size="50" placeholder="검색어를 입력하세요." required>
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-danger">Search</button>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 교육센터소개 -------------------------------------------------------------->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>교육센터소개</h2>
+                    <p>TIS정보기술교육센터는 정부지원 IT전문 교육기관 입니다.</p>                   
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-signal logo"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 교육센터소개 -->
+
+    <!-- 교육센터비전 -------------------------------------------------------------->
+    <div class="container-fluid bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fas fa-globe logo"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2>교육센터비전</h2>
+                    <p>
+                        TIS정보기술교육센터는 4차산업혁명시대에 필요한 IT전문인력 양성을 위해 노력하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 교육센터비전-->
+
+    <!-- 교육과목 --------------------------------------------------------------->
+    <div class="container-fluid text-center">
+        <div class="container">
+            <h2 class="h2padd">교육과목</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fab fa-java logo-small"></i>
+                    <h4>JAVA</h4>
+                    <p>Object Oriented Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-html5 logo-small"></i>
+                    <h4>HTML5</h4>
+                    <p>Hyper Text Markup Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-css3-alt logo-small"></i>
+                    <h4>CSS3</h4>
+                    <p>Cascade Style Sheet</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fab fa-js-square logo-small"></i>
+                    <h4>Javascript</h4>
+                    <p>Front End Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-android logo-small"></i>
+                    <h4>Android</h4>
+                    <p>Mobile App Programming Language</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fab fa-node logo-small"></i>
+                    <h4>Node.js</h4>
+                    <p>Back-End Run Time Environment Based by Javascript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 교육과목 -->
+
+<!-- Container (Contact Section) --------------------------------------->
     
+        <div class="container-fluid bg-grey">
+            <div class="container">
+                <h2 class="text-center h2padd">CONTACT</h2>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <p>연락처</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 서울시 영등포구 당산동</p>
+                        <p><i class="fas fa-mobile-alt"></i> +00 1515151515</p>
+                        <p><i class="far fa-envelope"></i> myemail@something.com</p>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-info float-right" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Container (Contact Section)-->
+
+    <!-- footer ---------------------------------------------------------------------------------->
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <p>TIS.Edu all rights reserved.</p>
+    </footer>
+    <!-- footer -->
 </body>
 </html>
