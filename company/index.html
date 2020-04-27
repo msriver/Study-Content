@@ -23,6 +23,15 @@
     <!--Smooth scrolling using JQuery ----------------------------------------------------------------->
     <script>
         $(document).ready(function(){
+
+            $('.navbar-nav a').on('click', function(){
+                var width=$(window).width();
+                if(width<=768){
+                    $('.btn-navbar').click(); //bootstrap 2.x
+                    $('.navbar-toggler').click(); //bootstrap 4.x     
+                }
+            });
+
           // Add smooth scrolling to all links in navbar + footer link
           $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
         
@@ -51,9 +60,7 @@
     <!--smooth scrolling -->
 
     <style>
-        .nav {
-            background-color: #6fb0ce !important;
-        }
+        
         .jumbotron {
             background-color: #6fb0ce;
             /* Orange */
@@ -132,7 +139,7 @@
     <div class="jumbotron text-center">
         <h1>TIS정보기술교육센터</h1>
         <p>- 정부지원 IT전문 훈련기관</p>
-        <div style="width: 500px;margin: auto;">
+        <div class="container" style="width: 300px;margin: auto;">
             <form class="form-inline">
                 <div class="input-group">
                     <input type="text" class="form-control" size="50" placeholder="검색어를 입력하세요." required>
