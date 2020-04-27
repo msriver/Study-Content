@@ -20,6 +20,10 @@
     <script src="https://kit.fontawesome.com/3f56318ab4.js" crossorigin="anonymous"></script>
     <!-- fontawesome -->
 
+    <!-- google font ----------------------------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Jua&family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+    <!-- google font -->
+
     <!--Smooth scrolling using JQuery ----------------------------------------------------------------->
     <script>
         $(document).ready(function(){
@@ -60,7 +64,11 @@
     <!--smooth scrolling -->
 
     <style>
+        body {
+        font: 400 18px 'Jua', sans-serif;
+        line-height: 1.8;
         
+        }
         .jumbotron {
             background-color: #6fb0ce;
             /* Orange */
@@ -108,7 +116,7 @@
     </style>
 </head>
 
-<body id="myPage">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--navigation ---------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top">
         <!-- Brand -->
@@ -326,7 +334,7 @@
         <a href="#myPage" title="To Top">
             <i class="fas fa-chevron-up"></i>
         </a>
-        <p>TIS.Edu all rights</p>
+        <p>TIS.Edu all rights reserved</p>
     </footer>
     <!-- footer -->
 </body>
