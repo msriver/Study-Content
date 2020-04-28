@@ -15,6 +15,45 @@
   <!-- fontawesome ------------------------------------------------>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+  <!--Smooth scrolling using JQuery ----------------------------------------------------------------->
+  <script>
+    $(document).ready(function () {
+
+      $('.navbar-nav a').on('click', function () {
+        var width = $(window).width();
+        if (width <= 768) {
+          $('.btn-navbar').click(); //bootstrap 2.x
+          $('.navbar-toggler').click(); //bootstrap 4.x     
+        }
+      });
+
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+  </script>
+  <!--smooth scrolling -->
+
   <style>
     #slider02 .carousel-indicators {
       position: absolute;
@@ -53,6 +92,33 @@
       color: black;
     }
 
+    #submenu {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+
+    #submenu .col-sm-2 {
+      border-left: 1px solid gray;
+    }
+
+    .bg-dark {
+      background: white !important;
+    }
+    .navbar {
+      height: 80px !important;
+    }
+    nav a {
+      color: black !important;
+    }
+
+    .navbar-toggler {
+      background-color: gray !important;
+      color: black !important
+    }
+    /* .modal-content {
+      width: 800px !important;  
+    } */
+
     @media screen and (max-width: 768px) {
 
       #vid01_pc,
@@ -71,7 +137,40 @@
 
 </head>
 
-<body>
+<body id="mypage">
+
+  <!--navigation ---------------------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-md bg-dark navbar-white fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#myage"><img src="img/titlelogo.jpg" alt=""></a>
+
+    <!-- 메뉴버튼 ------------------------------------------------------------------------------->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#goods">제품소개</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#mobile">모바일&IT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#story">스토리</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#map">IT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--navigation-->
 
   <!-- carousel ---------------------------------------------------------------------------------------------------->
   <div id="slider01" class="carousel slide" data-ride="carousel">
@@ -85,12 +184,12 @@
     <!-- The slideshow -->
     <div class="carousel-inner">
       <div id="box1" class="carousel-item active">
-        <video id="vid01_pc" muted autoplay loop>
+        <video id="vid01_pc" width="100%" muted autoplay loop>
           <source
             src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_PC_1920_810_v3.mp4"
             type="video/mp4">
         </video>
-        <video id="vid01_mo" muted autoplay loop>
+        <video id="vid01_mo" width="100%" muted autoplay loop>
           <source
             src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_MO_1920_810_v3.mp4"
             type="video/mp4">
@@ -106,19 +205,19 @@
       </div>
 
       <div class="carousel-item">
-        <img id="img01_pc" src="img/home_kv_01_pc_1920x810.webp" width="100%" height="816" alt="Los Angeles">
-        <img id="img01_mo" src="img/home_kv_01_mo_720x1480.webp" width="100%" height="1480" alt="Los Angeles">
+        <img id="img01_pc" src="img/home_kv_01_pc_1920x810.webp" width="100%" alt="Los Angeles">
+        <img id="img01_mo" src="img/home_kv_01_mo_720x1480.webp" width="100%" alt="Los Angeles">
       </div>
 
       <div class="carousel-item">
         <video id="vid02_pc"
           src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_pc_1920x810.mp4"
-          loop autoplay muted>
+          loop autoplay muted width="100%">
         </video>
 
         <video id="vid02_mo"
           src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_mo_720x1480.mp4"
-          loop autoplay muted>
+          loop autoplay muted width="100%">
         </video>
       </div>
     </div>
@@ -135,9 +234,7 @@
   <!-- carousel -->
 
   <!-- 제품소개 --------------------------------------------------------------------------------------->
-  <div class="container">
-
-
+  <div id="goods" class="container">
 
     <ul class="nav nav-pills justify-content-center">
       <li class="nav-item">
@@ -158,16 +255,48 @@
     </ul>
 
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-md-3 col-6">
         <div class="card" style="width:100%">
           <img class="card-img-top" src="img/goods01.webp" alt="Card image">
           <div class="card-body">
             <h6 class="card-title">김치플러스 뚜껑형 202 L</h6>
-            <a href="#" class="btn btn-primary">More</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">More</a>
+
+            <!-- modal창 ------------------------------------------------------------------------------------------------------------>
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">김치플러스 뚜껑형 202 L</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body text-center">
+                    <h2>한겨울 땅속 같은 아삭한 김치맛 메탈쿨링</h2>
+                    <p>
+                      냉기 보존에 탁월한 메탈쿨링으로 초정온 기술(±0.3 ℃ 온도 편차)을 적용하여
+                      한겨울 땅 속 같은 아삭한 김치 맛을 오래오래 지켜드립니다.
+                    </p>
+                    <img src="img/goods09.webp" width="100%" alt="">
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--modal창-->
+
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-md-3 col-6">
         <div class="card" style="width:100%">
           <img class="card-img-top" src="img/goods02.webp" alt="Card image">
           <div class="card-body">
@@ -176,7 +305,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-md-3 col-6">
         <div class="card" style="width:100%">
           <img class="card-img-top" src="img/goods03.webp" alt="Card image">
           <div class="card-body">
@@ -185,7 +314,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-md-3 col-6">
         <div class="card" style="width:100%">
           <img class="card-img-top" src="img/goods04.webp" alt="Card image">
           <div class="card-body">
@@ -196,61 +325,66 @@
       </div>
     </div>
   </div>
+
+
   <!-- 제품소개 -->
 
   <!-- 모바일&IT carousel ---------------------------------------------------------------------------------------------------->
-  <div id="slider02" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators text-center">
-      <li data-target="#slider02" data-slide-to="0" class="active">갤럭시북 Flex</li>
-      <li data-target="#slider02" data-slide-to="1">Galaxy Buds+</li>
-      <li data-target="#slider02" data-slide-to="2">살롱데포토그라프</li>
-      <li data-target="#slider02" data-slide-to="3">갤럭시스튜디오</li>
-    </ul>
+  <div id="mobile">
+    <h3>모바일 & IT</h3>
+    <div id="slider02" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators text-center">
+        <li data-target="#slider02" data-slide-to="0" class="active">갤럭시북 Flex</li>
+        <li data-target="#slider02" data-slide-to="1">Galaxy Buds+</li>
+        <li data-target="#slider02" data-slide-to="2">살롱데포토그라프</li>
+        <li data-target="#slider02" data-slide-to="3">갤럭시스튜디오</li>
+      </ul>
 
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div id="box2" class="carousel-item active">
-        <img src="img/galaxybook_pc.webp" width="100%">
-        <img src="img/galaxybook_mo.webp" width="100%">
-        <div class="carousel-caption slideInUp animated">
-          <!-- animate.css 사용법, 클래스 이름 쓰고 animated 적어주면 끝 -->
-          <h3>갤럭시 북 Flex α 사전판매 알림신청</h3>
-          <p>
-            삼성닷컴에서 가장 먼저 만나보세요!
-          </p>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div id="box2" class="carousel-item active">
+          <img src="img/galaxybook_pc.webp" width="100%">
+          <img src="img/galaxybook_mo.webp" width="100%">
+          <div class="carousel-caption slideInUp animated">
+            <!-- animate.css 사용법, 클래스 이름 쓰고 animated 적어주면 끝 -->
+            <h3>갤럭시 북 Flex α 사전판매 알림신청</h3>
+            <p>
+              삼성닷컴에서 가장 먼저 만나보세요!
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/buds_pc.webp" width="100%">
+          <img src="img/buds_mo.webp" width="100%">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/photography_pc.jpg" width="100%">
+          <img src="img/photography_mo.webp" width="100%">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/studio_pc.jpg" width="100%">
+          <img src="img/studio_mo.webp" width="100%">
         </div>
       </div>
 
-      <div class="carousel-item">
-        <img src="img/buds_pc.webp" width="100%">
-        <img src="img/buds_mo.webp" width="100%">
-      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#slider02" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
 
-      <div class="carousel-item">
-        <img src="img/photography_pc.jpg" width="100%">
-        <img src="img/photography_mo.webp" width="100%">
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/studio_pc.jpg" width="100%">
-        <img src="img/studio_mo.webp" width="100%">
-      </div>
+      <a class="carousel-control-next" href="#slider02" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#slider02" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-
-    <a class="carousel-control-next" href="#slider02" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
   </div>
   <!-- 모바일&IT carousel -->
 
   <!-- 스토리 -------------------------------------------------------------------------------------------->
-  <div class="container">
+  <div id="story" class="container">
     <div class="row">
       <div class="col-sm-3">
         <h2>스토리</h2>
@@ -270,6 +404,101 @@
   </div>
   <!-- 스토리 -->
 
+  <!-- sub menu ----------------------------------------------------------------------------------------------->
+  <div id="submenu" class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>제품</h3>
+          <div class="row">
+            <div class="col-sm-6">
+              <pre>
+                스마트폰
+                태블릿
+                웨어러블
+                모바일 액세서리
+                TV
+                Lifestyle TV
+                BESPOKE
+                삼성 오디오 
+              </pre>
+            </div>
+            <div class="col-sm-6">
+              <pre>
+                냉장고
+                에어컨
+                세탁기
+                건조기
+                에어드레서
+                청소기
+                노트북
+                데스크탑
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <h3>고객문의</h3>
+          <pre>
+            FAQ
+            이메일 상담
+            매장 찾기
+            서비스센터 찾기
+            디지털프라자 아카데미
+            비즈니스 협력제안
+            MD 비즈니스 협력제안  
+          </pre>
+        </div>
+        <div class="col-sm-2">
+          <h3>부가정보</h3>
+          <pre>
+            삼성 디지털프라자
+            데이코
+            뉴스룸
+            디자인 삼성
+            삼성전자 사회공헌
+            구매안전서비스
+            폐카트리지 회수신청
+          </pre>
+        </div>
+        <div class="col-sm-2">
+          <h3>기업정보</h3>
+          <pre>
+            회사소개
+            투자자 정보
+            공지사항
+            제품 접근성
+            삼성멤버스 커뮤니티
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sub menu-->
+
+  <!-- footer --------------------------------------------------------------------------------------------------->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10" style="font-size: 8px;">
+          Copyright © 1995-2020 SAMSUNG All Rights Reserved.
+          <br>
+          경기도 수원시 영통구 삼성로 129 (매탄동) 삼성전자주식회사 대표이사 김기남 사업자등록번호 124-81-00998 사업자 정보확인 통신판매업 신고: 2000-경기수원-0515 호스팅서비스사업자 :
+          삼성에스디에스(주)
+          <br>
+          대표번호: 02-2255-0114 팩스: 02-2255-0117 제품/서비스/멤버십: 1588-3366 구매문의: 1588-6084
+          <br>
+          삼성전자주식회사는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다. 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재,
+          복사, 배포 등을 금합니다.
+        </div>
+        <div class="col-sm-2">
+          <img src="img/icon_WA.webp">
+          <img src="img/icon-epri.webp">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
 </body>
 
 </html>
