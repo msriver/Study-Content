@@ -55,52 +55,58 @@
   <!--smooth scrolling -->
 
   <style>
+    .outter{
+      padding-top: 100px;
+    }
     #slider02 .carousel-indicators {
       position: absolute;
-      top: 50px;
+      top: -55px;
     }
-
     #slider02 .carousel-indicators>li,
     #slider02 .carousel-indicators>li.active {
       width: 200px;
       height: 25px;
-      font-size: 20px;
-      color: rgb(130, 184, 206);
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
       background: rgba(0, 0, 0, 0);
       text-indent: 0;
     }
-
-    #vid01_pc,
-    #img01_pc,
-    #vid02_pc {
+    .cont01_pc,
+    .cont02_pc,
+    .cont03_pc,
+    .cont04_pc {
       display: block;
     }
-
-    #vid01_mo,
-    #img01_mo,
-    #vid02_mo {
+    .cont01_mo,
+    .cont02_mo,
+    .cont03_mo,
+    .cont04_mo {
       display: none;
     }
-
-    #box1 .carousel-caption {
+    .text-area {
       position: absolute;
-      left: -600px;
-      top: 350px;
+      left: 13%;
+      top: 50%;
+      color: white;
+      transform: translate(0,-50%);
     }
-
+    .text-area h3{
+      font-size: 56px;
+    }
     #box2 .carousel-caption {
       color: black;
     }
-
+    #box2 .carousel-item {
+      margin: auto !important;
+    }
     #submenu {
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
     }
-
     #submenu .col-sm-2 {
       border-left: 1px solid gray;
     }
-
     .bg-dark {
       background: white !important;
     }
@@ -110,7 +116,6 @@
     nav a {
       color: black !important;
     }
-
     .navbar-toggler {
       background-color: gray !important;
       color: black !important
@@ -118,21 +123,49 @@
     /* .modal-content {
       width: 800px !important;  
     } */
+    #goods .nav .active {
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #73a5ce;
 
+    }
+    #goods .nav a {
+      color: black !important;
+      margin: 3px;
+      font-weight: bold;
+    }
+    .crack {
+      height: 100px;
+    }
+    
     @media screen and (max-width: 768px) {
 
-      #vid01_pc,
-      #img01_pc,
-      #vid02_pc {
+      .cont01_pc,
+      .cont02_pc,
+      .cont03_pc,
+      .cont04_pc {
         display: none;
       }
-
-      #vid01_mo,
-      #img01_mo,
-      #vid02_mo {
+      .cont01_mo,
+      .cont02_mo,
+      .cont03_mo,
+      .cont04_mo {
         display: block;
       }
+      .text-area{
+        text-align: center;
+        left: 20%;
+        top: 30%;
+      }
+      .text-area h3{
+        font-size: 72px;
+      }
+      #slider02 .carousel-indicators>li,
+      #slider02 .carousel-indicators>li.active {
+        font-size: 12px;
+      }
+
     }
+
   </style>
 
 </head>
@@ -142,7 +175,7 @@
   <!--navigation ---------------------------------------------------------------------------------->
   <nav class="navbar navbar-expand-md bg-dark navbar-white fixed-top">
     <!-- Brand -->
-    <a class="navbar-brand" href="#myage"><img src="img/titlelogo.jpg" alt=""></a>
+    <a class="navbar-brand" href="#mypage"><img src="img/titlelogo.jpg" alt=""></a>
 
     <!-- 메뉴버튼 ------------------------------------------------------------------------------->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -173,70 +206,82 @@
   <!--navigation-->
 
   <!-- carousel ---------------------------------------------------------------------------------------------------->
-  <div id="slider01" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#slider01" data-slide-to="0" class="active"></li>
-      <li data-target="#slider01" data-slide-to="1"></li>
-      <li data-target="#slider01" data-slide-to="2"></li>
-    </ul>
-
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div id="box1" class="carousel-item active">
-        <video id="vid01_pc" width="100%" muted autoplay loop>
-          <source
-            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_PC_1920_810_v3.mp4"
-            type="video/mp4">
-        </video>
-        <video id="vid01_mo" width="100%" muted autoplay loop>
-          <source
-            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_MO_1920_810_v3.mp4"
-            type="video/mp4">
-        </video>
-        <div class="carousel-caption">
-          <h3>2020 NEW</h3>
-          <h3>BESPOKE 런칭</h3>
-          <p>
-            새로운 컬러, 업그레이드된 스펙 <br>
-            BESPOKE 신제품을 지금 만나보세요.
-          </p>
+  <div class="container-fluid px-0">
+    <div id="slider01" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#slider01" data-slide-to="0" class="active">BESPOKE</li>
+        <li data-target="#slider01" data-slide-to="1">Galaxy S20</li>
+        <li data-target="#slider01" data-slide-to="2">QLED 8K</li>
+      </ul>
+  
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div id="box1" class="carousel-item active">
+          <video class="cont01_pc" width="100%" muted autoplay loop>
+            <source
+              src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_PC_1920_810_v3.mp4"
+              type="video/mp4">
+          </video>
+          <video class="cont01_mo" width="100%" muted autoplay loop>
+            <source
+              src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_MO_1920_810_v3.mp4"
+              type="video/mp4">
+          </video>
+            <div class="text-area">
+              <h3>2020 NEW</h3>
+              <h3>BESPOKE 런칭</h3>
+              <p>
+                새로운 컬러, 업그레이드된 스펙 <br>
+                BESPOKE 신제품을 지금 만나보세요.
+              </p>
+            </div>
+        </div>
+  
+        <div class="carousel-item">
+          <img class="cont02_pc" src="img/home_kv_01_pc_1920x810.webp" width="100%" alt="Los Angeles">
+          <img class="cont02_mo" src="img/home_kv_01_mo_720x1480.webp" width="100%" alt="Los Angeles">
+          <div class="text-area">
+            <h3>GALAXY S20</h3>
+            <h3>S20+ | S20</h3>
+            <h3>Ultra 5G</h3>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <video class="cont03_pc"
+            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_pc_1920x810.mp4"
+            loop autoplay muted width="100%">
+          </video>
+  
+          <video class="cont03_mo"
+            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_mo_720x1480.mp4"
+            loop autoplay muted width="100%">
+          </video>
+          <div class="text-area">
+            <h3>2020 QLED 8K</h3>
+            <p>삼성닷컴만의 압도적인 혜택을 공개합니다.</p>
+            
+          </div>
         </div>
       </div>
-
-      <div class="carousel-item">
-        <img id="img01_pc" src="img/home_kv_01_pc_1920x810.webp" width="100%" alt="Los Angeles">
-        <img id="img01_mo" src="img/home_kv_01_mo_720x1480.webp" width="100%" alt="Los Angeles">
-      </div>
-
-      <div class="carousel-item">
-        <video id="vid02_pc"
-          src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_pc_1920x810.mp4"
-          loop autoplay muted width="100%">
-        </video>
-
-        <video id="vid02_mo"
-          src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_mo_720x1480.mp4"
-          loop autoplay muted width="100%">
-        </video>
-      </div>
+  
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#slider01" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+  
+      <a class="carousel-control-next" href="#slider01" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#slider01" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-
-    <a class="carousel-control-next" href="#slider01" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
   </div>
   <!-- carousel -->
 
   <!-- 제품소개 --------------------------------------------------------------------------------------->
-  <div id="goods" class="container">
+  <div id="goods" class="container outter">
 
-    <ul class="nav nav-pills justify-content-center">
+    <ul class="nav nav-pills justify-content-center" style="margin-bottom: 30px;">
       <li class="nav-item">
         <a class="nav-link active" href="#">으뜸효율가전</a>
       </li>
@@ -254,150 +299,155 @@
       </li>
     </ul>
 
-    <div class="row">
-      <div class="col-md-3 col-6">
-        <div class="card" style="width:100%">
-          <img class="card-img-top" src="img/goods01.webp" alt="Card image">
-          <div class="card-body">
-            <h6 class="card-title">김치플러스 뚜껑형 202 L</h6>
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">More</a>
-
-            <!-- modal창 ------------------------------------------------------------------------------------------------------------>
-            <div class="modal fade" id="myModal">
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">김치플러스 뚜껑형 202 L</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 col-6">
+          <div class="card" style="width:100%">
+            <img class="card-img-top" src="img/goods01.webp" alt="Card image">
+            <div class="card-body">
+              <h6 class="card-title">김치플러스 뚜껑형 202 L</h6>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">More</a>
+  
+              <!-- modal창 ------------------------------------------------------------------------------------------------------------>
+              <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">김치플러스 뚜껑형 202 L</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body text-center">
+                      <h2>한겨울 땅속 같은 아삭한 김치맛 메탈쿨링</h2>
+                      <p>
+                        냉기 보존에 탁월한 메탈쿨링으로 초정온 기술(±0.3 ℃ 온도 편차)을 적용하여
+                        한겨울 땅 속 같은 아삭한 김치 맛을 오래오래 지켜드립니다.
+                      </p>
+                      <img src="img/goods09.webp" width="100%" alt="">
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+  
                   </div>
-
-                  <!-- Modal body -->
-                  <div class="modal-body text-center">
-                    <h2>한겨울 땅속 같은 아삭한 김치맛 메탈쿨링</h2>
-                    <p>
-                      냉기 보존에 탁월한 메탈쿨링으로 초정온 기술(±0.3 ℃ 온도 편차)을 적용하여
-                      한겨울 땅 속 같은 아삭한 김치 맛을 오래오래 지켜드립니다.
-                    </p>
-                    <img src="img/goods09.webp" width="100%" alt="">
-                  </div>
-
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
-
                 </div>
               </div>
+              <!--modal창-->
+  
             </div>
-            <!--modal창-->
-
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="card" style="width:100%">
-          <img class="card-img-top" src="img/goods02.webp" alt="Card image">
-          <div class="card-body">
-            <h6 class="card-title">냉장고 615 L Refined Inox</h6>
-            <a href="#" class="btn btn-primary">More</a>
+        <div class="col-md-3 col-6">
+          <div class="card" style="width:100%">
+            <img class="card-img-top" src="img/goods02.webp" alt="Card image">
+            <div class="card-body">
+              <h6 class="card-title">냉장고 615 L Refined Inox</h6>
+              <a href="#" class="btn btn-primary">More</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="card" style="width:100%">
-          <img class="card-img-top" src="img/goods03.webp" alt="Card image">
-          <div class="card-body">
-            <h6 class="card-title">BESPOKE 냉장고 4도어</h6>
-            <a href="#" class="btn btn-primary">More</a>
+        <div class="col-md-3 col-6">
+          <div class="card" style="width:100%">
+            <img class="card-img-top" src="img/goods03.webp" alt="Card image">
+            <div class="card-body">
+              <h6 class="card-title">BESPOKE 냉장고 4도어</h6>
+              <a href="#" class="btn btn-primary">More</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="card" style="width:100%">
-          <img class="card-img-top" src="img/goods04.webp" alt="Card image">
-          <div class="card-body">
-            <h6 class="card-title">무풍에어컨 무풍갤러리 청정</h6>
-            <a href="#" class="btn btn-primary">More</a>
+        <div class="col-md-3 col-6">
+          <div class="card" style="width:100%">
+            <img class="card-img-top" src="img/goods04.webp" alt="Card image">
+            <div class="card-body">
+              <h6 class="card-title">무풍에어컨 무풍갤러리 청정</h6>
+              <a href="#" class="btn btn-primary">More</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
   <!-- 제품소개 -->
 
-  <!-- 모바일&IT carousel ---------------------------------------------------------------------------------------------------->
-  <div id="mobile">
-    <h3>모바일 & IT</h3>
-    <div id="slider02" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ul class="carousel-indicators text-center">
-        <li data-target="#slider02" data-slide-to="0" class="active">갤럭시북 Flex</li>
-        <li data-target="#slider02" data-slide-to="1">Galaxy Buds+</li>
-        <li data-target="#slider02" data-slide-to="2">살롱데포토그라프</li>
-        <li data-target="#slider02" data-slide-to="3">갤럭시스튜디오</li>
-      </ul>
 
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div id="box2" class="carousel-item active">
-          <img src="img/galaxybook_pc.webp" width="100%">
-          <img src="img/galaxybook_mo.webp" width="100%">
-          <div class="carousel-caption slideInUp animated">
-            <!-- animate.css 사용법, 클래스 이름 쓰고 animated 적어주면 끝 -->
-            <h3>갤럭시 북 Flex α 사전판매 알림신청</h3>
-            <p>
-              삼성닷컴에서 가장 먼저 만나보세요!
-            </p>
+  <!-- 모바일&IT carousel ---------------------------------------------------------------------------------------------------->
+  <div id="mobile" class="container-fluid px-0 outter">
+    <div>
+      <h3 style="text-align: center;margin-bottom: 60px;">모바일 & IT</h3>
+      <div id="slider02" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators text-center">
+          <li data-target="#slider02" data-slide-to="0" class="active">갤럭시북 Flex</li>
+          <li data-target="#slider02" data-slide-to="1">Galaxy Buds+</li>
+          <li data-target="#slider02" data-slide-to="2">살롱 데 포토그라프</li>
+          <li data-target="#slider02" data-slide-to="3">갤럭시스튜디오</li>
+        </ul>
+  
+        <!-- The slideshow -->
+        <div class="container">
+          <div class="carousel-inner">
+            <div id="box2" class="carousel-item active ">
+              <img class="cont01_pc" src="img/galaxybook_pc.webp" width="100%">
+              <img class="cont01_mo" src="img/galaxybook_mo.webp" width="100%">
+              <div class="carousel-caption slideInUp animated">
+                <!-- animate.css 사용법, 클래스 이름 쓰고 animated 적어주면 끝 -->
+                <h3>갤럭시 북 Flex α 사전판매 알림신청</h3>
+                <p>
+                  삼성닷컴에서 가장 먼저 만나보세요!
+                </p>
+              </div>
+            </div>
+    
+            <div class="carousel-item">
+              <img class="cont02_pc" src="img/buds_pc.webp" width="100%">
+              <img class="cont02_mo" src="img/buds_mo.webp" width="100%">
+            </div>
+    
+            <div class="carousel-item">
+              <img class="cont03_pc" src="img/photography_pc.jpg" width="100%">
+              <img class="cont03_mo" src="img/photography_mo.webp" width="100%">
+            </div>
+    
+            <div class="carousel-item">
+              <img class="cont04_pc" src="img/studio_pc.jpg" width="100%">
+              <img class="cont04_mo" src="img/studio_mo.webp" width="100%">
+            </div>
           </div>
         </div>
-
-        <div class="carousel-item">
-          <img src="img/buds_pc.webp" width="100%">
-          <img src="img/buds_mo.webp" width="100%">
-        </div>
-
-        <div class="carousel-item">
-          <img src="img/photography_pc.jpg" width="100%">
-          <img src="img/photography_mo.webp" width="100%">
-        </div>
-
-        <div class="carousel-item">
-          <img src="img/studio_pc.jpg" width="100%">
-          <img src="img/studio_mo.webp" width="100%">
-        </div>
+  
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#slider02" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+  
+        <a class="carousel-control-next" href="#slider02" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#slider02" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#slider02" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
   </div>
   <!-- 모바일&IT carousel -->
 
   <!-- 스토리 -------------------------------------------------------------------------------------------->
-  <div id="story" class="container">
+  <div id="story" class="container outter">
     <div class="row">
-      <div class="col-sm-3">
-        <h2>스토리</h2>
+      <div class="col-sm-3" style="background-color: skyblue;">
+        <h1>스토리</h1>
         <p>
           당신의 삶을 특별하게 해줄 새로운 아이디어<br>
           스마트하게 사는 새로운 방법을 알아보세요.
         </p>
         <div class="btn btn-dark">더 알아보기</div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" style="background-color: skyblue">
         <img src="img/pic05_pc.webp" width="100%" alt="pickmepickmepickme up!">
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3" style="background-color: skyblue;">
         BTS가 촬영장에서 휴식을 즐기는 방법!
       </div>
     </div>
@@ -405,7 +455,7 @@
   <!-- 스토리 -->
 
   <!-- sub menu ----------------------------------------------------------------------------------------------->
-  <div id="submenu" class="container-fluid">
+  <div id="submenu" class="container-fluid outter">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -477,7 +527,7 @@
   <!-- sub menu-->
 
   <!-- footer --------------------------------------------------------------------------------------------------->
-  <div class="container-fluid">
+  <div class="container-fluid outter">
     <div class="container">
       <div class="row">
         <div class="col-sm-10" style="font-size: 8px;">
