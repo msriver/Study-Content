@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- fontawesome ------------------------------------------------>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+    #slider02 .carousel-indicators {
+      position: absolute;
+      top: 50px;
+    }
+
+    #slider02 .carousel-indicators>li,
+    #slider02 .carousel-indicators>li.active {
+      width: 200px;
+      height: 25px;
+      font-size: 20px;
+      color: rgb(130, 184, 206);
+      background: rgba(0, 0, 0, 0);
+      text-indent: 0;
+    }
+
+    #vid01_pc,
+    #img01_pc,
+    #vid02_pc {
+      display: block;
+    }
+
+    #vid01_mo,
+    #img01_mo,
+    #vid02_mo {
+      display: none;
+    }
+
+    #box1 .carousel-caption {
+      position: absolute;
+      left: -600px;
+      top: 350px;
+    }
+
+    #box2 .carousel-caption {
+      color: black;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      #vid01_pc,
+      #img01_pc,
+      #vid02_pc {
+        display: none;
+      }
+
+      #vid01_mo,
+      #img01_mo,
+      #vid02_mo {
+        display: block;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- carousel ---------------------------------------------------------------------------------------------------->
+  <div id="slider01" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#slider01" data-slide-to="0" class="active"></li>
+      <li data-target="#slider01" data-slide-to="1"></li>
+      <li data-target="#slider01" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div id="box1" class="carousel-item active">
+        <video id="vid01_pc" muted autoplay loop>
+          <source
+            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_PC_1920_810_v3.mp4"
+            type="video/mp4">
+        </video>
+        <video id="vid01_mo" muted autoplay loop>
+          <source
+            src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_MO_1920_810_v3.mp4"
+            type="video/mp4">
+        </video>
+        <div class="carousel-caption">
+          <h3>2020 NEW</h3>
+          <h3>BESPOKE 런칭</h3>
+          <p>
+            새로운 컬러, 업그레이드된 스펙 <br>
+            BESPOKE 신제품을 지금 만나보세요.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img id="img01_pc" src="img/home_kv_01_pc_1920x810.webp" width="100%" height="816" alt="Los Angeles">
+        <img id="img01_mo" src="img/home_kv_01_mo_720x1480.webp" width="100%" height="1480" alt="Los Angeles">
+      </div>
+
+      <div class="carousel-item">
+        <video id="vid02_pc"
+          src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_pc_1920x810.mp4"
+          loop autoplay muted>
+        </video>
+
+        <video id="vid02_mo"
+          src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_mo_720x1480.mp4"
+          loop autoplay muted>
+        </video>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#slider01" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#slider01" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <!-- carousel -->
+
+  <!-- 제품소개 --------------------------------------------------------------------------------------->
+  <div class="container">
+
+
+
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">으뜸효율가전</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">새로운갤럭시</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">우리집 맑음샵</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">특별한 혜택</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">추천 제품</a>
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card" style="width:100%">
+          <img class="card-img-top" src="img/goods01.webp" alt="Card image">
+          <div class="card-body">
+            <h6 class="card-title">김치플러스 뚜껑형 202 L</h6>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width:100%">
+          <img class="card-img-top" src="img/goods02.webp" alt="Card image">
+          <div class="card-body">
+            <h6 class="card-title">냉장고 615 L Refined Inox</h6>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width:100%">
+          <img class="card-img-top" src="img/goods03.webp" alt="Card image">
+          <div class="card-body">
+            <h6 class="card-title">BESPOKE 냉장고 4도어</h6>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width:100%">
+          <img class="card-img-top" src="img/goods04.webp" alt="Card image">
+          <div class="card-body">
+            <h6 class="card-title">무풍에어컨 무풍갤러리 청정</h6>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 제품소개 -->
+
+  <!-- 모바일&IT carousel ---------------------------------------------------------------------------------------------------->
+  <div id="slider02" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators text-center">
+      <li data-target="#slider02" data-slide-to="0" class="active">갤럭시북 Flex</li>
+      <li data-target="#slider02" data-slide-to="1">Galaxy Buds+</li>
+      <li data-target="#slider02" data-slide-to="2">살롱데포토그라프</li>
+      <li data-target="#slider02" data-slide-to="3">갤럭시스튜디오</li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div id="box2" class="carousel-item active">
+        <img src="img/galaxybook_pc.webp" width="100%">
+        <img src="img/galaxybook_mo.webp" width="100%">
+        <div class="carousel-caption slideInUp animated">
+          <!-- animate.css 사용법, 클래스 이름 쓰고 animated 적어주면 끝 -->
+          <h3>갤럭시 북 Flex α 사전판매 알림신청</h3>
+          <p>
+            삼성닷컴에서 가장 먼저 만나보세요!
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/buds_pc.webp" width="100%">
+        <img src="img/buds_mo.webp" width="100%">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/photography_pc.jpg" width="100%">
+        <img src="img/photography_mo.webp" width="100%">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/studio_pc.jpg" width="100%">
+        <img src="img/studio_mo.webp" width="100%">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#slider02" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#slider02" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <!-- 모바일&IT carousel -->
+
+  <!-- 스토리 -------------------------------------------------------------------------------------------->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h2>스토리</h2>
+        <p>
+          당신의 삶을 특별하게 해줄 새로운 아이디어<br>
+          스마트하게 사는 새로운 방법을 알아보세요.
+        </p>
+        <div class="btn btn-dark">더 알아보기</div>
+      </div>
+      <div class="col-sm-6">
+        <img src="img/pic05_pc.webp" width="100%" alt="pickmepickmepickme up!">
+      </div>
+      <div class="col-sm-3">
+        BTS가 촬영장에서 휴식을 즐기는 방법!
+      </div>
+    </div>
+  </div>
+  <!-- 스토리 -->
+
+</body>
+
+</html>
