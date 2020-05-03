@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/*  Reset CSS  */
+* { margin:0;  padding:0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#bbb;}
+img { border:0;}
+body { position:fixed;  width:100%; height:100%; background:#111;}
+
+/* 배경동영상 style set */
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0;bottom: 0;left: 0;right: 0;
+    z-index: -99;
+}
+.video-foreground, .video-foreground iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    opacity: 0.8;
+}
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+}
+
+/*로고 및 header */
+h1 { position:fixed; top:40px; left:40px; z-index:10;}
+h1 img { width:220px; height:auto;}
+header { width:700px; height:100%; position:fixed; top:0px; left:-420px; background-color: rgba(255, 255, 255, 0.7); transform:skewX(-40deg);}
+
+/* 1단메뉴 */
+#gnb { width: 220px; position: absolute; right: 0px; top: 150px;}
+#gnb>li { position: relative ;}
+#gnb>li>a { display: block; width: 220px; height: 50px; color: #222; text-align: right; padding-right: 40px; font: bold 18px/3 play ;}
+#gnb>li.on>a { background-color:black; color: white;}
+#gnb>li:hover>a { background:#333; color:#fff;}
+#gnb em { display:inline-block; transform:skewX(40deg)!important; }
+#gnb em i { 	margin-right:20px;}
+
+/* 2단메뉴 */ 
+#gnb ul { position:absolute; left:0px;  top:0px; opacity:0; transition:all 0.4s;}
+#gnb>li:hover ul { opacity:0.8; left:205px; }
+#gnb ul a { display:block; width:150px; height:40px; background:#222; border-bottom:1px solid #b9fb05; font:bold 16px/2.5 arial; color:#fff; box-sizing:border-box; padding-left:50px; margin-bottom:3px; transition:all 0.5s; }
+#gnb ul a:hover { background:#abaca9; color:#333; }
+/* #gnb>li.on ul { opacity:0.8; left:205px; top:-10px; }
+#gnb li.on ul a { background:#444; opacity:0.7; }  */
+
+/* sns 버튼들 style */
+#sns {position: fixed; top: 10px; right: 70px;}
+#sns li {float: left; margin-top: 10px; margin-right: 30px;}
+#sns li .fa {color: white;font-size: 25px; opacity: 0.5;transform: scale(1); transition: 0.5s;}
+#sns li .fa:hover {transform: scale(1.4); opacity: 1;}
+
+/* 텍스트 박스 */
+.txtBox { width:500px; height:280px; position:fixed; top:200px; right:70px; }
+.txt { position:absolute; top:200px; right:0px; font-size:34px; font-family:play; color:#bbb; letter-spacing:-2px;}
+.txt b { font:bold 34px arial; color:#fff; 	margin-left:20px;}
+.tit { position:absolute; top:70px; right:0px; font-size:90px; color:#fff; font-family: 'Anton', cursive; letter-spacing:-1px;}
+.tit em { font-size:50px; font-family:play; color:#fff;}
+
+/* 하단 contents 레이아웃 */
+#side { width:800px; height:100%; position:fixed; bottom:0px; right:-800px; background:#111; opacity:0.5; transform:skewX(-40deg); transition:all 0.5s;}
+#side:hover { right:-500px; opacity:0.8;}
+#side .con { width:400px; height:100%; position:absolute; left:150px; bottom:0px; background:#000; 	box-sizing:border-box; padding:10px; transition:all  1s;}
+#side:hover .con { left:50px;}
+
+/* 하단 contents내 썸네일 */
+#side .con p { width: 300px; height:100px; position:absolute; left:50px;}
+#side .con p em { display:inline-block; font:bold 16px/1.7 arial; color:white; transform:skewX(40deg);}
+#side .con p img { width:300px; height:70px; opacity:0.3; transition:all 0.5s;}
+#side .con p img:hover { opacity:1;}
+#side .con p:nth-child(1) { bottom:270px; transform: translateX(200px); transition:all  0.4s;}
+#side .con p:nth-child(2) { bottom:160px; transform: translateX(200px); transition:all  0.8s;}
+#side .con p:nth-child(3) { bottom:50px; transform: translateX(200px); transition:all  1.2s;}
+#side:hover .con p { transform:translateX(0px);}	
+
+/* 자동롤링 버튼*/
+#side .btnContents { width:150px; height:50px; position:absolute;  bottom:40px; left:100px; color:white;	transform:skewX(40deg); }
+#side:hover .btnContents { left:700px;}	
+.btnContents i { font-size:60px; position:absolute; bottom:0px; right:0px; opacity:1;}
+.btnContents i:nth-child(1) { animation:ani linear 1.5s 0s infinite;}
+.btnContents i:nth-child(2) { animation:ani linear 1.5s 0.5s infinite;}
+.btnContents i:nth-child(3) { animation:ani linear 1.5s 1.0s infinite;}
+
+@keyframes ani {
+	0% { right:0px; transform:sclae(1); opacity:1;}
+	100% { right:100px; transform:scale(1.5); opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
